@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <body style="background-color:aliceblue;"></body>
+    <title>The One Hit Wonder Project</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="container">
+      <div class="row">
+        <h1 class="col-sm-8">The One Hit Wonder Project</h1>
+        <div class="col-sm-8">
+          <a href="about.html" target="_blank">
+            <button>About</button>
+        </a>
+          <a href="https://github.com/" target="_blank">
+            <button>Github</button>
+        </a>
+        <a href="/" target="_blank">
+          <button>Back</button>
+        </a>
+      </div>
+      </div>
+        
+        <img src={{chosen_image}} alt="headphones" height = "200" width = "400">
+
+<h1>{{data}}</h1>
+
+<h2>Top 5 songs by this artist</h2>
+{% for item in songs %}
+<p> {{ item }} </p>
+{% endfor %}
+
+<h2>Difference score</h2>
+<p> {{diff_score}} </p>
+
+
+<h2>Number of followers</h2>
+<p>{{num}}</p>
+
+<h2>Genre</h2>
+{% for item in genre %}
+<p> {{ item }} </p>
+{% endfor %}
+
+<h2>Similar Artists</h2>
+{% for item in related %}
+<p> {{ item }} </p>
+{% endfor %}
+
+<h2>Spotify Popularity Score</h2>
+<p>{{pop}}</p>
+</html>
